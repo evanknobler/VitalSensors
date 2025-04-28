@@ -1,0 +1,25 @@
+&spi2 {
+    status = "okay";
+
+    cs-gpios = <&gpio0 30 GPIO_ACTIVE_LOW>, /* MAX30001 CSB */
+               <&gpio0 31 GPIO_ACTIVE_LOW>; /* MAX86140 CSB */
+
+    max30001: max30001@0 {
+        compatible = "zephyr,spi-device";
+        reg = <0>;                   /* CS index 0 */
+        spi-max-frequency = <12000000>;
+    };
+
+    max86140: max86140@1 {
+        compatible = "zephyr,spi-device";
+        reg = <1>;                   /* CS index 1 */
+        spi-max-frequency = <4000000>; /* MAX86140 max SPI clock 4MHz */
+    };
+};
+
+/ {
+    aliases {
+        max30001 = &max30001;
+        max86140 = &max86140;
+    };
+};
