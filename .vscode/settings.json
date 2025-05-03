@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "gpio.h": "c",
+        "devicetree.h": "c",
+        "bluetooth.h": "c",
+        "spi.h": "c",
+        "device.h": "c",
+        "log.h": "c",
+        "scheduling.h": "c",
+        "kernel.h": "c",
+        "wireless.h": "c",
+        "compare": "c",
+        "gatt.h": "c",
+        "algorithm": "c"
+    }
+}
